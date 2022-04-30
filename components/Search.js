@@ -55,11 +55,9 @@ export default function Search() {
       });
     },
     onSelectedItemChange({ selectedItem }) {
-      if (selectedItem !== null) {
-        router.push({
-          pathname: `/product/${selectedItem?.id}`,
-        });
-      }
+      router.push({
+        pathname: `/product/${selectedItem.id}`,
+      });
     },
     itemToString: (item) => item?.name || '',
   });
@@ -71,7 +69,7 @@ export default function Search() {
             type: 'search',
             placeholder: 'Search for an Item',
             id: 'search',
-            className: loading ? 'loading' : '',
+            className: loading ? 'loading' : null,
           })}
         />
       </div>

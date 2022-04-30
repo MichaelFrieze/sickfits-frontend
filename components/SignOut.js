@@ -13,12 +13,7 @@ export default function SignOut() {
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
   return (
-    <button
-      type="button"
-      onClick={() => {
-        signout();
-      }}
-    >
+    <button type="button" onClick={signout}>
       Sign Out
     </button>
   );
